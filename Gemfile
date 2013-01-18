@@ -5,7 +5,8 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'paperclip', '2.7.0'
+gem 'searcher', :git => "git://github.com/radar/searcher"
 
 
 # Gems used only for assets and not required
@@ -23,7 +24,9 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
+  gem 'gmail', '0.4.0'
   gem "rspec-rails", "~> 2.12.0"
+  gem 'sqlite3'
 end
 
 group :test do
@@ -32,17 +35,7 @@ group :test do
   gem 'database_cleaner'
 end
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+group :production do
+   gem 'therubyracer'
+   gem 'pg'
+end

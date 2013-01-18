@@ -13,3 +13,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/bin
+.DS_Store
+/public/system
+
+config/initializers/mail.rb
