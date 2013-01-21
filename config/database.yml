@@ -6,8 +6,11 @@
 development:
   adapter: postgresql
   database: ticketee_development
+  username: postgres
+  password: Developer
   pool: 5
   timeout: 5000
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -15,12 +18,16 @@ development:
 test: &test
   adapter: postgresql
   database: ticketee_test
+  username: postgres
+  password: Developer
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
   database: ticketee_production
+  username: postgres
+  password: Developer
   pool: 5
   timeout: 5000
 
