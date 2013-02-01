@@ -7,7 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'paperclip', '2.7.0'
 gem 'searcher', :git => "git://github.com/radar/searcher"
-
+gem 'devise', '~> 1.4.3'
 
 # Gems used only for assets and not required
 # in production environments by default.

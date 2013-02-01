@@ -3,9 +3,9 @@
 <head>
   <title>
     <% if content_for?(:title) %>
-      <%= yield(:title) %>
+    <%= yield(:title) %>
     <% else %>
-      Ticketee
+    Ticketee
     <% end %>
   </title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -13,9 +13,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/messages' %>
-<h1><%= <%= link_to "Ticketee", root_path %> %></h1>
-<%= yield %>
+  <nav>
+    <%= link_to "Sign up", new_user_registration_path %>
+  </nav>
+  <%= render 'layouts/messages' %>
+  <h1><%= <%= link_to "Ticketee", root_path %> %></h1>
+  <%= yield %>
 
 </body>
 </html>
